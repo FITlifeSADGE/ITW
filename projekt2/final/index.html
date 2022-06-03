@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang='zxx'>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dr. Disrespect</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.webp">
+</head>
+
+<body>
+    <section id="button">
+        <button type="button" id="desktop" onclick="Desktop()" title="Desktop">
+            <i class="fa fa-desktop" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="mobile" onclick="Mobile()" title="Mobile">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+        </button>
+    </section>
+    <script>
+        function Mobile() {
+            /*document.body.style.width = '800px';*/
+            /*var siteWidth = 1920;
+            var scale = screen.width / siteWidth;
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');*/
+            if (screen.width > 1200) {
+                document.body.style.width = "20%";
+            }
+            var x = document.getElementById("navigation");
+            x.style.display = "none";
+            var y = document.getElementById("menu");
+            y.style.display = "block";
+            document.body.style.marginLeft = 'auto';
+            document.body.style.marginRight = 'auto';
+            document.getElementById("general").style.marginLeft = '0';
+            document.getElementById("education").style.marginLeft = '0';
+            document.getElementById("streaming").style.marginLeft = '0';
+            document.getElementById("real_life").style.marginLeft = '0';
+            document.getElementById("awards").style.marginLeft = '0';
+            document.getElementById("button").style.marginLeft = '0';
+            document.getElementById("klik").style.display = 'inline-block';
+            document.getElementById("mobile").style.backgroundColor = "rgb(199, 199, 199)";
+            document.getElementById("mobile").style.borderRadius = "30%";
+            document.getElementById("desktop").style.backgroundColor = "white";
+        }
+        function Desktop() {
+            document.body.style.width = '100%';
+            var x = document.getElementById("navigation");
+            x.style.display = "block";
+            var y = document.getElementById("menu");
+            y.style.display = "none";
+            document.getElementById("general").style.marginLeft = '25.5%';
+            document.getElementById("education").style.marginLeft = '25.5%';
+            document.getElementById("streaming").style.marginLeft = '25.5%';
+            document.getElementById("real_life").style.marginLeft = '25.5%';
+            document.getElementById("awards").style.marginLeft = '25.5%';
+            document.getElementById("button").style.marginLeft = '25.5%';
+            document.getElementById("klik").style.display = 'none';
+            document.getElementById("mobile").style.backgroundColor = "white";
+            document.getElementById("desktop").style.backgroundColor = "rgb(199, 199, 199)";
+            document.getElementById("desktop").style.borderRadius = "30%";
+        }
+        function showmenu() {
+            var x = document.getElementById('navigation2');
+            if (x.style.visibility == 'hidden') {
+                //x.style.display = 'block';
+                x.style.visibility = 'visible';
+                x.style.height = 'auto';
+                x.style.opacity = '1';
+            } else {
+                //x.style.display = 'none';
+                x.style.visibility = 'hidden';
+                x.style.height = '0';
+                x.style.opacity = '0';
+                x.style.transition = 'display 0s, opacity 0.5s linear';
+            }
+            /*if (x.style.display == 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }*/
+        }
+        function load() {
+            if (screen.width > 1200) {
+                Desktop();
+            }
+            else {
+                Mobile();
+            }
+        }
+        window.onload = load;
+    </script>
+    <header>
+        <nav id="navigation">
+            <ul>
+                <li><img src="img/TheDoc.jpg" alt="main"></li>
+                <li><a href="index.html#general">In general</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li class="hide"><a href="index.html#streaming">Streaming</a>
+                    <ol>
+                        <li class="hide-one"><a href="#twitch-id">Twitch</a></li>
+                        <li class="hide-one"><a href="#youtube-id">YT</a></li>
+                    </ol>
+                </li>
+                <li><a href="index.html#real_life">Guy Beahm</a></li>
+                <li class="hide"><a href="index.html#awards">Awards</a>
+                    <ol>
+                        <li class="hide-one"><a href="index.html#blockbuster">Blockbuster</a></li>
+                        <li class="hide-one"><a href="index.html#Esport">Esports</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </nav>
+        <div id="menu">
+            <button type="button" id="klik" data-toggle="collapse" onclick="showmenu()">
+                Menu
+            </button>
+            <nav id="navigation2">
+                <ul>
+                    <li><a href="index.html#general">In general</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li class="hide"><a href="index.html#streaming">Streaming</a>
+                        <ol>
+                            <li class="hide-one"><a href="#twitch-id">Twitch</a></li>
+                            <li class="hide-one"><a href="#youtube-id">YT</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="index.html#real_life">Guy Beahm</a></li>
+                    <li class="hide"><a href="index.html#awards">Awards</a>
+                        <ol>
+                            <li class="hide-one"><a href="index.html#blockbuster">Blockbuster</a></li>
+                            <li class="hide-one"><a href="index.html#Esport">Esports</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="general">
+        <div class="obecne">
+            <h1><a href="https://www.stud.fit.vutbr.cz/~xkapra00/">Dr <span class="red-text">Disrespect</span></a></h1>
+            <h3>In general</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div class="persona">
+                <h3>Stream persona</h3>
+                <img src="img/perosna.jpg" alt="persona">
+                <h4>Bullet proof Mullet</h4>
+                <p>Black steel drips down back</p>
+                <p>The panther's mane</p>
+                <h4>Google prototype scopes</h4>
+                <p>Built-in LCD, LED, 1080p, 3D SONY technology</p>
+                <h4>Ethiopian poisonous caterpillar</h4>
+                <p>Slick daddy</p>
+                <h4>Jawline of perfection</h4>
+                <p>Simply the best</p>
+            </div>
+            <div id="networks">
+                <h3>Social Media</h3>
+                <span id="twitter"><a href="https://twitter.com/drdisrespect"><i class="fab fa-twitter"></i></a></span>
+                <span id="youtube"><a href="https://www.youtube.com/channel/UCcJL2ld6kxy_nuV1u7PVQ0g"><i
+                            class="fab fa-youtube"></i></a></span>
+                <span id="instagram"><a href="https://www.instagram.com/drdisrespect/"><i
+                            class="fab fa-instagram"></i></a></span>
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <div class="vzdelani">
+            <h1>Education</h1>
+            <div class="studium">
+                <h3>Studium</h3>
+                <h4><a href="https://www.cpp.edu/">California State Polytechnic University</a></h4>
+                <p>Graduated in 2005</p>
+            </div>
+            <div class="job">
+                <h3>Jobs</h3>
+                <div class="container">
+                    <h4><a href="https://www.sledgehammergames.com/">Sledgehammer Games</a></h4>
+                    <p>16.03.2011 - 20.4.2012</p>
+                </div>
+                <p>Community manager</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+                <div class="container">
+                    <h4><a href="https://www.sledgehammergames.com/">Sledgehammer Games</a></h4>
+                    <p>20.4.2012 - 5.5.2015</p>
+                </div>
+                <p>Level designer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+    <section id="streaming">
+        <div class="twitch">
+            <div id="twitch-id">
+                <h1>Twitch</h1>
+                <div class="container">
+                    <h3>Full-time streamer</h3>
+                    <p>2011 - 26.6.2020</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                </p>
+            </div>
+        </div>
+        <div class="youtube">
+            <div id="youtube-id">
+                <h1><a href="https://www.youtube.com/c/DrDisRespect">Youtube</a></h1>
+                <div class="container">
+                    <h3>Full-time streamer</h3>
+                    <p>7.8.2020 - present</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="real_life">
+        <div class="IRL">
+            <h1>Guy Beahm</h1>
+            <img src="img/guy_beahm_dr_disrespect_1.0.jpg" alt="beahm">
+            <h2><a href="https://www.amazon.com/Violence-Speed-Momentum-Dr-Disrespect/dp/1982153873">Memoir</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <h2><a href="https://www.hirezstudios.com/">Hi-Rez Studios</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <h2><a href="https://midnightsociety.com/">Midnight Society</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+    </section>
+    <section id="awards">
+        <div class="oceneni">
+            <h1>Awards</h1>
+            <img src="img/trophy.png" alt="trophy">
+            <div id="blockbuster">
+                <h2>Blockbuster</h2>
+                <p>1993 blockbuster video game champion <i class="fa fa-trophy golden"></i></p>
+                <p>1994 blockbuster video game champion <i class="fa fa-trophy golden"></i></p>
+            </div>
+            <div id="Esport">
+                <h2>Esport awards</h2>
+                <p>2017 Esports Awards - Streamer of the year <i class="fa fa-trophy golden"></i></p>
+                <p>2019 Esports Awards - Streamer of the year <i class="fa fa-trophy golden"></i></p>
+                <p>2021 Esports Awards - Streamer of the year - Nominated</p>
+            </div>
+            <h2>The Game Award</h2>
+            <p>2017 Trending Gamer <i class="fa fa-trophy golden"></i></p>
+        </div>
+    </section>
+</body>
+
+</html>

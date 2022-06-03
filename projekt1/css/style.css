@@ -1,0 +1,578 @@
+/*
+ * Login: xkapra00
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
+ */
+*{
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+}
+h3 {
+    font-size: 24px;
+}
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: auto;
+    float: none;
+}
+/*Nastavení maximální a minimální šířky stránky*/
+.content {
+    max-width: 1200px;
+    min-width: 768px;
+    margin: auto;
+    resize: both;
+}
+section {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+/*Sekce Header*/
+header {
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    height: 100vh; /*výška je velikost viewportu*/
+    margin: auto;
+    min-height: 800px;
+    background-size: cover;
+}
+#header-menu {
+    padding: 0 0 0 10px;
+    display: block;
+}
+#logo {
+    color: steelblue;
+    font-size: 25px;
+}
+#logo a {
+    color: steelblue;
+    font-family: 'Special Elite', cursive;
+}
+#logo a:hover {
+    color:white;
+}
+nav ul{
+	margin: 0;
+	padding: 0 0 0 0.5em;
+    letter-spacing: 0.05em; /*formátování celého menu*/
+	display: inline;
+    font-size: 13px;
+    border: 1px;
+    position: relative;
+    top: -50px;
+}
+nav ul li { /*formátování jednotlivých položek menu*/
+	color: #898989;
+	display: inline-block;
+	list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #898989;
+    padding: 5px 15px;
+    background-color: transparent;
+}
+nav ul li a:hover {
+    outline: 1px solid #898989;
+    padding: 15px;
+}
+#header-title h1{ 
+    font-size: 64px;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#get-started {
+    font-size: larger;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 15px;
+    width: 15%;
+    color: #898989;
+    margin-left: 20px;
+}
+#get-started a {
+    color:#898989;
+}
+#get-started:hover{
+    color: steelblue;
+    background-color: steelblue;
+    transition: all .25s linear;
+}
+#get-started:hover a { 
+    color:white;
+    transition: all .25s linear; /*plynulý přechod*/
+}
+#header-title {
+    position: absolute;
+    top: 66%; /*posunutí do 2/3 stránky*/
+}
+#contacts {
+    color: #898989;
+    text-align: right;
+}
+#contacts span {
+    padding-left: 10px;
+}
+#contacts a {
+    text-decoration: none;
+    color: #898989;
+}
+#contacts a:hover {
+    color: white;
+}
+#contacts i {
+    color: steelblue;
+}
+#networks {
+    text-align: right;
+}
+#networks i{
+    color: steelblue;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+#networks i:hover {
+    color: white;
+}
+.content h2 {
+    text-align: center;
+}
+/*Services*/
+#services .content{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.services-card {
+    width: 300px; /*nastavení šířky jednotlivých karet*/
+}
+#services .content:not(.services-card)> p{ /*velikost písma v sekci Our services*/
+    font-size: 18px;
+}
+.services-column {
+    display: table; /*formát karet do čtverce*/
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 5px;
+    float: left;
+    margin-right: 20px;/*mezera mezi kartama*/
+    margin-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 10px 0 #bfbfbf;
+}
+.services-column:hover {
+    box-shadow: 0 0 10px 0 steelblue;
+}
+.services-column:hover h3 {
+    color: steelblue;
+}
+.services-column img {
+    display: inline-block;
+    height: 50px; 
+    border: 1px solid steelblue;
+    margin: auto;
+    border-radius: 5px;
+}
+.services-column:hover img {
+    background-color: steelblue;
+    display: none;
+}
+.services-column p {
+    display: inline;
+    font-size: 14px;
+    width: 80%; /*odhad šířky textu*/
+}
+img:not(:first-child){ /*odstranění 2. obrázku z karty v our services*/
+    display: none;
+}
+.services-column:hover img:not(:first-child) { /*navrácení 2. obrázku z karty*/
+    display: unset;
+}
+
+#services .content > div {
+    width: 700px;
+    margin-left: auto; /*centrování services-card*/
+    margin-right: auto;
+}
+/*About*/
+.about-item {
+    overflow: hidden;
+}
+/*responzivní velikost obrázků*/
+.about-item img {
+    height: 40%;
+    width: 40%;
+    border-radius: 5px;
+    transition: all .25s linear; /*plynulý přechod*/
+}
+.about-item p {
+    color:#898989;
+    text-align: justify; /*text ohraničuje obrázek*/
+}
+/*nastavení pro každý lichý odstavec*/
+#about .about-item:nth-child(odd) img{
+    float: left;
+    margin-right: 80px;
+    margin-bottom: 40px;
+}
+#about .about-item:nth-child(odd) p h2{
+    float: right;
+}
+/*nastavení pro každý sudý odstavec*/
+#about .about-item:nth-child(even) img {
+    float:right;
+    margin-left: 80px;
+    margin-bottom: 40px;
+}
+#about .about-item:nth-child(even) p h2{
+    float: left;
+}
+/*zvětšení obrázku*/
+#about img:hover {
+    width: 50%;
+    height: 50%;
+    transition: all .25s linear;
+}
+/*Team*/
+#team {
+    border-bottom: #898989 dashed;
+}
+#team .content {
+    text-align: center;
+    padding-bottom: 60px;
+    border-spacing: 20px;
+}
+#team .content h2 {
+    font-size:60px;
+}
+/*rozložení karet vedle sebe*/
+#team .team-card {
+    display: table-cell;
+    box-shadow: 0 0 10px 0 #bfbfbf;
+}
+#team .team-card{
+    width: 10%;
+    height: 10%;
+    transition: all .25s linear;
+}
+/*výška a šířka je 100% šířky karty*/
+#team .team-card img {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    overflow: auto;
+    transition: all .25s linear;
+}
+#team .team-card h3 {
+    margin-bottom: -10px;
+}
+#team .team-card h4 {
+    margin-bottom: -10px;
+    color: #898989;
+}
+#team .team-card p {
+    color: #bfbfbf;
+}
+#team .team-card:hover {
+    box-shadow: 0 0 10px 0 steelblue;
+}
+#team .team-card:hover h3{
+    color: steelblue;
+}
+/*Stats*/
+#stats .stats-card {
+    display: table-cell; /*Rozložení karet vedle sebe*/
+    border: #4d4d4d solid;
+    width: 25%;
+    height: 40%;
+    transition: all .25s linear;
+    min-width: 300px;
+    text-align: center;
+    margin-left: 20px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+}
+#stats .content {
+    border-spacing: 20px; /*mezera mezi kartami*/
+    justify-content: center;
+    display: flex; 
+}
+#stats .content h3 {
+    color: white;
+    margin-top: -15px;
+}
+#stats .content p {
+    color: #898989;
+    margin-top: -15px;
+}
+#stats .stats-card i {
+    font-size: 32px; /*velikost ikony*/
+    color: steelblue;
+    border: 10px solid;
+    border-radius: 50%;
+    border-color:white;
+    position: relative;
+    top: -25px; /*posunutí ikony nahoru*/
+    background-color: white;
+}
+#stats .stats-card:hover { /*fixnout ten img nahoře*/
+    background-color: steelblue;
+    border-color: steelblue;
+}
+/*Price - tabulka*/
+#price {
+    background-color: #f7f7f7;
+}
+#price table {
+    width: 80%;
+    margin-left: auto; /*centrování*/
+    margin-right: auto;
+    border-spacing: 0 1em;
+}
+#price th {
+    text-align: left;
+}
+#price table tr {
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+/*nastavení pozadí 2. a 3. položky na bílou barvu*/
+#price table tr:not(:first-child):hover {
+    background-color: white;
+}
+/*nastavení pozadí 1. řádků na bílou barvu*/
+#price table tr:hover td {
+    color: steelblue;
+    background-color: white;
+}
+#price table td {
+    color: #898989;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px dotted steelblue;
+    border-top: 1px dotted steelblue;
+}
+#price table tr button {
+    padding: 20px;
+    background: none;
+    border-radius: 5px;
+    border-color: steelblue;
+    outline: none;
+}
+#price button:hover {
+    background-color: steelblue;
+    color: white;
+}
+#price .content table ul li:first-child {
+    list-style: none; /*odstranění odrážky u každé první položky*/
+    font-weight: bold;
+}
+#price .content table ul {
+    list-style-position: inside;
+    padding-left: 0px;
+}
+/*Refs*/
+#refs .content {
+    text-align: center;
+}
+#refs .refs-card {
+    display: inline-block;
+    width: 400px;
+    margin-right: -40px;
+}
+#refs .refs-card:hover blockquote{
+    background-color: steelblue;
+}
+/*pro změnu barvy po najetí na kartu*/
+#refs .refs-card:hover blockquote::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 15px 18px 0 0;
+    border-color: steelblue transparent transparent transparent;
+    bottom: -15px;
+    left: 15%;
+    margin-left: -9px;
+}
+#refs .refs-card:hover blockquote::before {
+    content:"\0022";
+    font-size: 5em;
+    position: absolute;
+    bottom: -50%;
+    color: white;
+}
+#refs img {
+    width: 60px;
+    border-radius: 50%;
+    float: left;
+}
+#refs blockquote {
+    text-align: left;
+    background-color: #4d4d4d;
+    color: white;
+    display: block;
+}
+#refs blockquote span {
+    margin-left: 10%;
+    font-size: 12px;
+    overflow: auto;
+}
+
+#refs h3 {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 75px;
+    color: #898989;
+    font-size: medium;
+}
+blockquote {
+    position: relative;
+    background: #4d4d4d;
+    font-size: medium;
+    line-height: 50px; /*výška jednoho řádku*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px;
+}
+/*přidání uvozovek*/
+blockquote::before {
+    content:"\0022";
+    font-size: 5em;
+    position: absolute;
+    bottom: -50%;
+    color: steelblue;
+}
+/*přidá citaci trojúhelník směrem k obrázku*/
+blockquote::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 15px 18px 0 0;
+    border-color: #4d4d4d transparent transparent transparent;
+    bottom: -15px;
+    left: 15%;
+    margin-left: -9px;
+}
+/*Contact*/
+#contact {
+    border-top: dashed #898989;
+}
+#contact .content {
+    padding-top: 20px;
+    border-width: 200%;
+    border-radius: 5px;
+    min-width: 900px; /*aby se nerozbíjel formát mapy + vyplnění kontaktů*/
+    height: auto;
+    padding-left: 10%;
+}
+#contact h2 {
+    text-align: center;
+    margin-left: -15%;
+}
+#contact input {
+    line-height: 30px; /*velikost řádku*/
+    color: steelblue;
+}
+/*při kliknutí na input*/
+#contact input:focus {
+    border: 3px solid steelblue;
+    color: steelblue;
+}
+#contact textarea {
+    border-color: steelblue;
+    color: steelblue;
+    line-height: 25px;
+}
+/*kontrola emailu*/
+#contact input[type=email]:invalid {
+    color: red;
+}
+input[type=email]:valid{
+    border: 3px solid green;
+    border-radius: 5px;
+    color: steelblue;
+}
+#contact #map {
+    min-width: 500px;
+    min-height: 400px;
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin-right: 20px;
+}
+#contact #contact-name{
+    width: 19.5%;
+    margin-right: 0.5%;
+    margin-bottom: 10px;
+}
+#contact #contact-email {
+    width: 19.5%;
+}
+#contact #contact-subject {
+    width: 40%;
+    margin-bottom: 10px;
+}
+#contact #contact-message {
+    width: 40%;
+    margin-bottom: 10px;
+}
+#contact #contact-submit {
+    width: 25%;
+    background-color: steelblue;
+    color: white;
+    border-radius: 5px;
+    margin-left: 7.5%;
+    margin-top: 10px;
+    line-height: 35px;
+}
+#contact #contact-submit:hover {
+    background-color: green;
+}
+/*zarovnání formuláře*/
+#contact input, textarea{
+    float: right;
+    display: block;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid steelblue;
+}
+#contact input:focus {
+    color: steelblue; 
+    border: 3px solid green;
+    outline: none;
+}
+#contact textarea:focus {
+    color: steelblue; 
+    border: 3px solid green;
+    outline: none;
+}
+#contact form {
+    height: 400px;
+}
+#footer {
+    color:#898989;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
+    background-color: black;
+}
+/*nastavení Rick roll odkazu*/
+#footer a {
+    float: right;
+    color: steelblue;
+    margin-right: 100px;
+}   

@@ -1,0 +1,363 @@
+* {
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*inmpelentace smooth-scroll*/
+}
+
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    /*zafixované menu*/
+    top: 0;
+    left: 0;
+    /*umístění doleva nahoru*/
+    overflow: auto;
+    background-color: black;
+}
+
+#navigation li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#navigation li a:hover {
+    color: red;
+    margin: auto;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    width: 75%;
+}
+
+#navigation ul li {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#navigation ul img {
+    width: 75%;
+    border-radius: 50%;
+    /*kulatý obrázek*/
+    display: block;
+    margin: auto;
+    border: 10px solid rgb(189, 37, 37);
+    /*červený okraj*/
+}
+
+section:not(:first-child) {
+    border-bottom: 1px solid rgb(255, 0, 0);
+    /*červený okraj sekcí*/
+}
+
+section {
+    margin-left: 25.5%;
+    /*posunutí textu vedle navigace*/
+    /*min-width: 600px;*/
+}
+
+#networks i {
+    font-size: 60px;
+    /*nastavení sociálních médií*/
+    color: rgb(189, 37, 37);
+}
+
+#networks i:hover {
+    color: black;
+}
+
+#networks span {
+    margin-right: 20px;
+}
+
+.red-text {
+    /*část titulku červenou barvou*/
+    color: rgb(255, 0, 0);
+}
+
+.obecne h1 {
+    font-size: 4vw;
+    /*font-size: 72px;*/
+}
+
+.obecne a {
+    color: black;
+}
+
+.obecne p {
+    width: 75%;
+}
+
+/*responzivní velikost textu*/
+h1 {
+    font-size: 3vw;
+    /*font-size: 50px;*/
+}
+
+h3 {
+    /*font-size: 30px;*/
+    font-size: 2.5vw;
+    color: rgb(51, 51, 51);
+}
+
+h4 {
+    font-size: 2vw;
+    /*font-size: 23px;*/
+    color: rgb(66, 66, 66);
+}
+
+p {
+    width: 75%;
+    color: black;
+}
+
+.IRL img {
+    width: 35%;
+}
+
+.persona {
+    overflow: hidden;
+}
+
+.persona img {
+    width: 50%;
+    margin-right: 25%;
+    /*min-width: 500px;*/
+    border-radius: 5%;
+    border: 2px solid black;
+    /*float: right;*/
+}
+
+.persona h3 {
+    margin-bottom: 5px;
+    /*min-width: 300px;*/
+}
+
+.persona p {
+    font-size: 17px;
+    /*min-width: 300px;*/
+    color: rgb(245, 0, 0);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.golden {
+    color: gold;
+    /*barva pohárů*/
+}
+
+.studium p {
+    color: rgb(247, 9, 9);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.vzdelani a {
+    color: black;
+}
+
+.vzdelani a:hover {
+    color: red;
+}
+
+/*nastavení pouze pro datum*/
+.job .container p:nth-of-type(1) {
+    color: red;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.twitch .container p:nth-of-type(1) {
+    color: red;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.youtube .container p:nth-of-type(1) {
+    color: red;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.youtube a {
+    text-decoration: none;
+    color: black;
+}
+
+.youtube a:hover {
+    color: red;
+}
+
+#real_life img {
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+#real_life h2 {
+    color: rgb(51, 51, 51);
+}
+
+.IRL a {
+    color: black;
+}
+
+.IRL a:hover {
+    color: red;
+}
+
+#button {
+    margin: auto;
+    /*position: sticky;
+    top: 0;*/
+    background-color: transparent;
+    /*tlačítko bez pozadí*/
+}
+
+button {
+    margin-right: 20px;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+#klik {
+    color: white;
+    background-color: black;
+    margin-top: 45px;
+    width: 100%;
+    position: sticky;
+    /*tlačítko menu zůstane nahoře na stránce*/
+    top: 0;
+}
+
+#awards img {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+#navigation2 {
+    position: sticky;
+    /*menu zůstane nahoře na stránce*/
+    top: 0;
+}
+
+#navigation2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    /*centrování*/
+    position: sticky;
+    top: 0;
+}
+
+#navigation2 li {
+    display: block;
+    /*zobrazí položky menu pod sebou*/
+    border-right: 1px solid #bbb;
+    text-align: center;
+}
+
+#navigation2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#navigation2 li a:hover {
+    color: red;
+}
+
+#menu {
+    position: sticky;
+    top: -5%;
+}
+
+#klik:hover {
+    color: red;
+}
+
+header {
+    display: unset;
+}
+
+.hide-one {
+    display: none;
+    /*schová podsekce*/
+}
+
+ol {
+    margin-top: -30px;
+    margin-left: -8%;
+}
+
+ol li {
+    margin-bottom: -30px;
+}
+
+#navigation ol li {
+    font-size: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hide {
+    margin-bottom: 10px;
+}
+
+.hide:hover>ol>.hide-one {
+    /*po najetí na parent sekci zobrazí podsekce*/
+    display: block;
+}
+
+.hide:hover>ol>.hide-one a {
+    color: white;
+}
+
+.hide:hover>ol>.hide-one a:hover {
+    color: red;
+}
+
+#navigation2 .hide-one {
+    display: none;
+}
+
+#navigation2 ol {
+    margin-top: -10px;
+    margin-left: -8%;
+}
+
+#navigation2 ol li {
+    margin-bottom: -20px;
+    font-size: 12px;
+}
+
+#navigation .hide {
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #menu {
+        top: 0;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+}
